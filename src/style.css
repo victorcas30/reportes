@@ -1,0 +1,59 @@
+.contenedor {
+    display: flex;
+    align-items: center;
+  }
+  
+  .linea {
+    flex-grow: 1;
+    height: 1px;
+    background-color: lightgray;
+  }
+  
+  .textoAnio {
+    margin: 0 10px;
+    color: #0684b9;
+  }
+  
+  .textoMarca {
+      margin: 0 10px;
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      font-size: x-large;
+    }
+    
+    .divGrid {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+    
+    
+    .textoDivGrid {
+      margin: 0 10px;
+      color: #0684b9;
+      font-weight: bolder;
+      font-size: larger;
+    }
+    .textoDivGrid2 {
+      margin: 0 10px;
+      color: #0684b9;
+      font-size: medium;
+    }
+
+    .iconoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1px;
+      }
+
+    .icono {
+        /*margin-right: 10px;*/
+        width: 45px; /* Ajusta el ancho y el alto según tus necesidades */
+        height: 45px;
+      }
+      
+      .contenedor1 {
+        flex-grow: 1;
+        text-align: center;
+      }

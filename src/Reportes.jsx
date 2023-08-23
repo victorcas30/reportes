@@ -182,32 +182,38 @@ const Reportes = () => {
                 }
         });
     };
-
-    return(
-        <>
+    
+    return (
         <div className="container">
-            <h1 className="display-4">Reportes</h1>
-            <hr/>
-            <button className="btn btn-dark" onClick={generarReporte}>Generar Reporte <IconoPDF/></button>
-            <button className="btn btn-dark ms-4" onClick={generarFicha}>Generar Fichas <IconoPDF1/></button>
-        </div>
-        <br />
-        <div className="container">
-        <h1 className="display-6">Lista de Vehiculos</h1>
-        <hr />
-        <table className="table table-secondary table-hover">
-            <thead>
+          <h1 className="display-4">Reportes</h1>
+          <hr />
+          <div className="btn-group" role="group">
+            <button className="btn btn-dark" onClick={generarReporte}>
+              Generar Reporte <IconoPDF />
+            </button>
+            <button className="btn btn-dark ms-2" onClick={generarFicha}>
+              Generar Fichas <IconoPDF1 />
+            </button>
+          </div>
+          <div className="report-content">
+            {/* Contenido del reporte */}
+          </div>
+          <div className="table-responsive">
+            <h1 className="display-6 mt-4">Lista de Vehiculos</h1>
+            <hr />
+            <table className="table table-secondary table-hover">
+              <thead>
                 <tr>
-                    <th>Inciso</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Placa</th>
-                    <th>Suma Asegurada</th>
-                    <th></th>
+                  <th>Inciso</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Placa</th>
+                  <th>Suma Asegurada</th>
+                  <th></th>
                 </tr>
-            </thead>
-            <tbody>
-                {
+              </thead>
+              <tbody>
+              {
                     automoviles.map(autosMap => {
                         const {Inciso,Marca,Modelo,Placa,SumaA} = autosMap;
                         return (
@@ -218,18 +224,21 @@ const Reportes = () => {
                                 <td> {Placa} </td>
                                 <td> {SumaA.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} </td>
                                 <td> 
+                                <div className="btn-group" role="group">
                                 <button className="btn btn-primary" onClick={() => generarFichaIndividual(Inciso)} > <IconoPDF /> </button> 
                                 <button className="btn btn-secondary ms-4" onClick={() => generarFichaStyle(Inciso)} > <IconoPDF1/> </button> 
+                                </div>
                                 </td>
                             </tr>
                         )
                     })
                 }
-            </tbody>
-        </table>
+              </tbody>
+            </table>
+          </div>
         </div>
-        </>
-    )
+      );
+      
 }
 
 export default Reportes;

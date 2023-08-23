@@ -3,6 +3,8 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 import { autos, fechaFormateada } from "./autos";
 import { IconoPDF, IconoPDF1 } from "./Iconos";
+import placaImg from './assets/placa.jpg';
+
 
 const Reportes = () => {
 
@@ -133,7 +135,7 @@ const Reportes = () => {
                     <div class="divGrid">
                         <div>
                             <div class="iconoContainer">
-                                <img src="/src/assets/placa.jpg" width="30" height="30" />
+                                <img src=${placaImg} width="30" height="30" />
                             </div>
                             <div class="contenedor1">
                                 <div class="textoDivGrid">${Placa}</div>

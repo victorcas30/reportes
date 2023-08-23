@@ -4,6 +4,8 @@ import "jspdf-autotable";
 import { autos, fechaFormateada } from "./autos";
 import { IconoPDF, IconoPDF1 } from "./Iconos";
 import placaImg from './assets/placa.jpg';
+import carroImg from './assets/carro.jpg';
+import sumaImg from './assets/suma.jpg';
 
 
 const Reportes = () => {
@@ -146,7 +148,7 @@ const Reportes = () => {
                         </div>
                         <div>
                             <div class="iconoContainer">
-                                <img src="/src/assets/carro.jpg" width="30" height="30" />
+                                <img src=${carroImg} width="30" height="30" />
                             </div>
                             <div class="contenedor1">
                                 <div class="textoDivGrid">${Modelo}</div>
@@ -157,7 +159,7 @@ const Reportes = () => {
                         </div>
                         <div>
                             <div class="iconoContainer">
-                                <img src="/src/assets/suma.jpg" width="30" height="30" />
+                                <img src=${sumaImg} width="30" height="30" />
                             </div>
                             <div class="contenedor1">
                                 <div class="textoDivGrid"> ${SumaA.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</div>
